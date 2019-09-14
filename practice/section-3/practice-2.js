@@ -1,5 +1,13 @@
 'use strict';
 
 function createUpdatedCollection(collectionA, objectB) {
-  return 'Implement the practice require, and begin changing code in this row';
+  let objectValue = objectB.value;
+  collectionA.forEach(element => {
+    let elementKey = element.key;
+    if (objectValue.includes(elementKey)) {
+      let countThree = element.count / 3;
+      element.count -= parseInt(countThree);
+    }
+  });
+  return collectionA;
 }
